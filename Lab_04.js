@@ -160,9 +160,20 @@ function PressKeyboard(event) {
         catch (e) {
             ans = "Error!!!!";
         }
-        document.getElementsByClassName("display")[0].value = '123';
+        document.getElementsByClassName("display")[0].value = ans;
     }
     else if(event.key == 'Backspace') {
-        document.getElementsByClassName("display")[0].value = nowNum.slice(0, -1);
+        if(document.getElementsByClassName("display")[0].value != "0") document.getElementsByClassName("display")[0].value = nowNum.slice(0, -1);
+    }
+    else if(event.key == '.') {
+        document.getElementsByClassName("display")[0].value += event.key; 
+    }
+    else if(event.key == '0' || event.key == '1' || event.key == '2' || event.key == '3' || event.key == '4' || 
+            event.key == '5' || event.key == '6' || event.key == '7' || event.key == '8' ||event.key == '9' ||
+            event.key == '+' || event.key == '-' || event.key == '*' || event.key == '/' ||
+            event.key == '(' || event.key == ')' ) {
+
+            document.getElementsByClassName("display")[0].value = (nowNum == "0" ) ? "" : nowNum;
+            document.getElementsByClassName("display")[0].value += event.key;      
     }
 }
