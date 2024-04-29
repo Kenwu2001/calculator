@@ -10,41 +10,43 @@
 	</head>
 
 	<!-- Todo 1: onkeydown = "your function here" -->
-	<body style="background-color:gray;">
+	<body style="background-color:gray;" onkeydown="PressKeyboard(event)">
 		<div id="calculator">
+			<!-- where the output is displayed -->
 			<div>
-				<input type="text" class="display" id="screen" value="0" readonly>
+				<input type="text" class="display" id="screen" value="0" readonly >
 			</div>
+
 			<table style="width:100%; table-layout:fixed ;" border="0" cellpadding="0">
 				<!-- Todo 2: onclick = "your function here" -->
 				<tr class="row">
-					<td><input type="button" value="C" class="btn btn3" ></td>
-					<td><input type="button" value="(" class="btn btn3" ></td>
-					<td><input type="button" value=")" class="btn btn3" ></td>
-					<td><input type="button" value="÷" class="btn btn2" ></td>
+					<td><input type="button" value="C" class="btn btn3" onclick="ClickButtonC()" ></td>
+					<td><input type="button" value="(" class="btn btn3" onclick="ClickButtonL()" ></td>
+					<td><input type="button" value=")" class="btn btn3" onclick="ClickButtonR()" ></td>
+					<td><input type="button" value="÷" class="btn btn2" onclick="ClickButtonDivide()" ></td>
 				</tr>
 				<tr class="row">
-					<td><input type="button" value="7" class="btn" ></td>
-					<td><input type="button" value="8" class="btn" ></td>
-					<td><input type="button" value="9" class="btn" ></td>
-					<td><input type="button" value="×" class="btn btn2" ></td> <!--the '×' is not lowercase 'X'-->
+					<td><input type="button" value="7" class="btn" onclick="ClickButton7()" ></td>
+					<td><input type="button" value="8" class="btn" onclick="ClickButton8()" ></td>
+					<td><input type="button" value="9" class="btn" onclick="ClickButton9()" ></td>
+					<td><input type="button" value="×" class="btn btn2" onclick="ClickButtonMultiply()" ></td> <!--the '×' is not lowercase 'X'-->
 				</tr>
 				<tr class="row">
-					<td><input type="button" value="4" class="btn" ></td>
-					<td><input type="button" value="5" class="btn" ></td>
-					<td><input type="button" value="6" class="btn" ></td>
-					<td><input type="button" value="-" class="btn btn2" ></td>
+					<td><input type="button" value="4" class="btn" onclick="ClickButton4()" ></td>
+					<td><input type="button" value="5" class="btn" onclick="ClickButton5()" ></td>
+					<td><input type="button" value="6" class="btn" onclick="ClickButton6()" ></td>
+					<td><input type="button" value="-" class="btn btn2" onclick="ClickButtonSub()" ></td>
 				</tr>	
 				<tr class="row">
-					<td><input type="button" value="1" class="btn" ></td>
-					<td><input type="button" value="2" class="btn" ></td>
-					<td><input type="button" value="3" class="btn" ></td>
-					<td><input type="button" value="+" class="btn btn2" ></td>
+					<td><input type="button" value="1" class="btn" onclick="ClickButton1()" ></td>
+					<td><input type="button" value="2" class="btn" onclick="ClickButton2()" ></td>
+					<td><input type="button" value="3" class="btn" onclick="ClickButton3()" ></td>
+					<td><input type="button" value="+" class="btn btn2" onclick="ClickButtonAdd()" ></td>
 				</tr>
 				<tr class="row">
-					<td colspan=2><input type="button" value="0" class="btn" style="width:100%;border-radius:40px"></td>
-					<td><input type="button" value="." class="btn" ></td>
-					<td><input type="button" value="=" class="btn btn2" ></td>
+					<td colspan=2><input type="button" value="0" class="btn" style="width:100%;border-radius:40px" onclick="ClickButton0()" ></td>
+					<td><input type="button" value="." class="btn" onclick="ClickButtonDot()" ></td>
+					<td><input type="button" value="=" class="btn btn2" onclick="ClickButtonEqual()" ></td>
 				</tr>
 			</div>
 		</div>
